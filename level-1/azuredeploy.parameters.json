@@ -1,0 +1,44 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+    "parameters": {
+      "location": {
+        "value": "eastus2"
+      },
+      "networkInterfaceName": {
+        "value": "MyNIC"
+      },
+      "vnetName": {
+        "value": "MyNet"
+      },
+      "vnetAddressPrefix": {
+        "value": "10.0.0.0/16"
+      },
+      "subnetName": {
+        "value": "MySubnet"
+      },
+      "subnetPrefix": {
+        "value": "10.0.0.0/24"
+      },
+      "virtualMachineName": {
+        "value": "cloudexpo-vm"
+      },
+      "osDiskType": {
+          "value": "Standard_LRS"
+      },
+      "virtualMachineSize": {
+          "value": "Standard_DS3"
+      },
+      "adminUsername": {
+          "value": "LocalAdminUser"
+      },
+      "adminPassword": {
+        "reference": {
+            "keyVault": {
+                "id": "/subscriptions/<insert subid>/resourceGroups/<insert resourcegroup name>/providers/Microsoft.KeyVault/vaults/<insert keyvault name>"
+            },
+            "secretName": "VMLocalAdminSecurePassword"
+        }
+      }
+    }
+}
