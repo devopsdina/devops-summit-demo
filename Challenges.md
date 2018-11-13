@@ -21,6 +21,10 @@
 - Update the ARM template from level 2 to deploy the Azure Antimalware Extension for the VM
 - [hint] (https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/iaas-antimalware-windows)
 
+### Challenge 3
+
+- Add in an automatic shutdown for 6pm in your current time zone
+
 ## Generic Challenges
 
 These can be done in the ARM templates or using PowerShell
